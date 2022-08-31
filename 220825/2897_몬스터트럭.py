@@ -5,6 +5,7 @@ for i in range(R):
     parking.append(list(input()))       # 리스트로 저장
 
 destroy = [0] * 5                       # 부수고 주차할 수 있는 공간 개수
+
 for r in range(R-1):                    # 행 범위 지정
     for c in range(C-1):                # 열 범위 지정
         # 범위를 벗어나지 않고 탐색하기 위해 -1
