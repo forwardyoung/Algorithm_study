@@ -7,6 +7,7 @@ for i in range(R):
 destroy = [0] * 5                       # 부수고 주차할 수 있는 공간 개수
 for r in range(R-1):                    # 행 범위 지정
     for c in range(C-1):                # 열 범위 지정
+        # 범위를 벗어나지 않고 탐색하기 위해 -1
         space = []                      # 4칸(몬스터 트럭 크기) 상태 저장
         space.append(parking[r][c])     # 첫번째 칸 상태
         space.append(parking[r][c+1])   # 두번째 칸 상태
