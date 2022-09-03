@@ -9,7 +9,7 @@ for tc in range(1, T+1):
         print("#{} {}".format(tc,-1))
         continue
 
-    if m in [1, 3, 5, 7, 8, 10, 12]: # 월이 다음 리스트에 있다면 일수가 1~31일이어야 함.
+    if m in [1, 3, 5, 7, 8, 10, 12]: # 월이 다음 리스트에 있다면 일수가 1~31일이어야 함
         if d < 1 or d > 31:
             print("#{} {}".format(tc,-1))
             continue
