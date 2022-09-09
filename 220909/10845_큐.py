@@ -1,32 +1,25 @@
 import sys
-input = sys.stdin.readline()
-
-N = int(input())
-queue = []  # 정수를 저장하는 큐 리스트 생성
+N = int(sys.stdin.readline().rstrip())
+queue = []
 
 for _ in range(N):
-    input_ = stdin.readline().split()
-    if input_[0] == 'push':
-        queue.append(input_[1])
-    elif input_[0] == 'pop':
-        if queue:
-            print(queue.pop(0))
-        else:
-            print(-1)
-    elif input_[0] == 'size':
+    command = list(sys.stdin.readline().rstrip().split())
+
+    if command[0] == "push":
+        queue.append(command[1])
+
+    elif command[0] == "pop":
+        # 제일 앞을 pop 한다.
+        print(queue.pop(0) if len(queue) else -1)
+
+    elif command[0] == "size":
         print(len(queue))
-    elif input_[0] == 'empty':
-        if not queue:
-            print(1)
-        else:
-            print(0)
-    elif input_[0] == 'front':
-        if not queue:
-            print(-1)
-        else:
-            print(queue[0])
-    elif input_[0] == 'back':
-        if not queue:
-            print(-1)
-        else:
-            print(queue[-1])
+
+    elif command[0] == "empty":
+        print(0 if len(queue) else 1)
+
+    elif command[0] == "front":
+        print(queue[0] if len(queue) else -1)
+
+    elif command[0] == "back":
+        print(queue[-1] if len(queue) else -1)
