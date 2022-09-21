@@ -20,3 +20,16 @@ for i in cnt_card:
         print(dic[i] , end = " ") # dic 딕셔너리의 i라는 key에 해당하는 value(상근이가 cnt_card를 몇 개 가지고 있는지) 출력
     else:
         print(0, end=" ") # 존재하지 않는다면 0 출력
+
+# 위의 2번의 for문에서 if, else 문 대신 try, except로 작성해도 됨
+
+# try:
+#     실행할 코드
+# except:
+#     예외가 발생했을 때 처리하는 코드
+
+# for i in card: 
+#     try:
+#         dic[i] += 1
+#     except:
+#         dic[i] = 1
