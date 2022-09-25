@@ -28,5 +28,6 @@ while queue:
                 queue.append(i)
                 visited.append(i)
                 cnt += 1
+                
 # 탐색된 컴퓨터의 갯수 출력
 print(cnt)
