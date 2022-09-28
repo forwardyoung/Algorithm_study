@@ -22,7 +22,8 @@ a = [1, 2, 3, 3, 5, 10]
 x = 3
 # bisect_left: 2, bisect_right: 4
 ```
-
+- bisect_left(a, x) : a에 x를 삽입할 위치 (기존 항목 앞)
+- bisect_right(a, x) : a에 있는 x의 기존 항목 뒤에 오는 삽입 위치
 ---
 
 🌍 [출처1](https://namu.wiki/w/%EC%B5%9C%EC%9E%A5%20%EC%A6%9D%EA%B0%80%20%EB%B6%80%EB%B6%84%20%EC%88%98%EC%97%B4)
