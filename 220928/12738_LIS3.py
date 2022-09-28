@@ -10,3 +10,4 @@ for i in arr:
         dp.append(i) 
     else: # i가 dp의 최댓값보다 작다면
         dp[k] = i # dp에 대해 알맞은 위치(k)에 num을 대치
+print(len(dp)) # dp(가장 긴 증가하는 부분 수열)의 길이 출력
