@@ -7,5 +7,5 @@ def solution(brown, yellow):
     for i in range(a, 2, -1): # 가로
         if a % i == 0:
             h = a // i # h : 세로
-            if yellow == (i-2)*(h-2): 
-                return [i, h]
+            if yellow == (i-2)*(h-2): # (가로-2)*(세로-2) => yellow 값 
+                return [i, h] 
