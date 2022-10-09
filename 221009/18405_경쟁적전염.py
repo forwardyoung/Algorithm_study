@@ -9,7 +9,7 @@ for i in range(N):
     graph.append(list(map(int, input().split())))
     for j in range(N):
         if graph[i][j] != 0: # 어느 위치에 바이러스가 존재한다면
-            data.append(graph[i][j], 0, i, j) # 바이러스의 번호, 시간, 위치 X, Y tkqdlq
+            data.append(graph[i][j], 0, i, j) # 바이러스의 번호, 시간, 위치 X, Y 삽입
 
 data.sort()
 q= deque(data)
