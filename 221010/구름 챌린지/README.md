@@ -17,3 +17,14 @@ print(sorted(test, key = lambda x:x[1]))
 
 🔎 [참고](https://edu.goorm.io/learn/lecture/33428/%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98-%EB%A8%BC%EB%8D%B0%EC%9D%B4-%EC%B1%8C%EB%A6%B0%EC%A7%80-%ED%95%B4%EC%84%A4/lesson/1664564/%EC%98%88%EC%8B%9C-%EB%AC%B8%EC%A0%9C%ED%95%B4%EC%84%A4-1-%EB%8B%A8%EC%96%B4%EC%9E%A5-%EB%A7%8C%EB%93%A4%EA%B8%B0)
 
+## 카드교환하기
+- 알고리즘 : DFS, BFS, 큰 수 처리
+- 불만족도는 사람의 순번과 그 사람이 들고 있는 카드의 수 차이의 절댓값이다.
+- u, v 번 양방향 친구 관계
+- 서로 친구 관계에 있는 두 사람끼리는 서로 들고 있는 카드를 원하는 만큼 교환할 수 있으며, **가능한 전체 불만족도의 최솟값**을 구하는 문제
+
+`1️⃣ 주어진 친구 관계를 간선으로 하는 그래프를 만들었을 때, 몇 개의 컴포넌트가 생기는지를 먼저 판별`
+`2️⃣ 각 컴포넌트에 있는 카드의 번호와 사람의 번호를 각각 정렬시킨 뒤 절댓값의 차이를 계산`
+
+
+🔎 [참고](https://edu.goorm.io/learn/lecture/33428/%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98-%EB%A8%BC%EB%8D%B0%EC%9D%B4-%EC%B1%8C%EB%A6%B0%EC%A7%80-%ED%95%B4%EC%84%A4/lesson/1664806/%EC%98%88%EC%8B%9C-%EB%B3%B5%EC%8A%B5%EB%AC%B8%EC%A0%9C-2-%EC%B9%B4%EB%93%9C%EA%B5%90%ED%99%98%ED%95%98%EA%B8%B0)
