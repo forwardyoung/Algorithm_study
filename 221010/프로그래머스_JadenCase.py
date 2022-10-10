@@ -1,5 +1,10 @@
 # 파이썬 문자열 capitalize()
 # 문자열의 첫글자는 대문자로, 나머지는 소문자로 변환한다.
+# join()
+# lst = ['a', 'b', 'c', 'd']
+# print( ''.join(lst) ) # abcd
+# print( ','.join(lst) ) # a,b,c,d
+# print( '--'.join(lst) ) # a--b--c--d
 
 def solution(s):
     answer = ''
