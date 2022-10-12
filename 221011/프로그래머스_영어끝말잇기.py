@@ -1,3 +1,5 @@
+# 코딩 테스트에 끝말잇기 문제가 나왔었음
+
 def solution(n, words):
     answer = [0,0]
 
