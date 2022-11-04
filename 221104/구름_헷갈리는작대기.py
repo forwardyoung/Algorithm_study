@@ -1,0 +1,5 @@
+word = input()
+print(word.count('1'))
+print(word.count('I'))
+print(word.count('l'))
+print(word.count('|'))
