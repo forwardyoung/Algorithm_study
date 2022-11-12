@@ -1,16 +1,16 @@
 import sys
 input = sys.stdin.readline
 
-n, m = map(int, input().split())
-A = [list(map(int, input().split())) for i in range(n)]
-m, k = map(int, input().split())
-B = [list(map(int, input().split())) for i in range(m)]
+N, M = map(int, input().split()) # 행렬 A의 크기
+A = [list(map(int, input().split())) for i in range(N)]
+M, K = map(int, input().split()) # 행렬 B의 크기
+B = [list(map(int, input().split())) for i in range(M)]
 
-for i in range(n):
+for i in range(N):
     result = []
-    for l in range(k):
+    for l in range(K):
         a = 0
-        for j in range(m):
+        for j in range(M):
             a += A[i][j] * B[j][l]
         result.append(a)
     print(*result)
