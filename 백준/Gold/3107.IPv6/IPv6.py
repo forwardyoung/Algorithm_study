@@ -7,7 +7,7 @@ if ipv6[-1] == '':
 
 result = ''
 for i in ipv6:
-    if i =='':
+    if i == '':
         result += '0000:'*(8-len(ipv6)+1)
     else:
         result += i.zfill(4)+':' # zfill() 지정한 자릿수 중 모자란 자릿수 0으로 채움
