@@ -1,6 +1,6 @@
 def solution(n, computers):
     def DFS(i):
-        visited[i] = 1
+        visited[i] = 1 # 방문 처리
         for j in range(n):
             if computers[i][j] and not visited[j]:
                 DFS(j)
