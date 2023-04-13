@@ -23,5 +23,5 @@ def solution(begin, target, words):
                 if temp_cnt == 1:   # 만약 다른 글자 개수가 1개라면
                         q.append([words[i], cnt+1])
                         V[i] = 1
-    return 0 # target값이 있으나 변환될 수 없다면
+    
             
