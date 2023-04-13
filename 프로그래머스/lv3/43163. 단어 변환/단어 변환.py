@@ -4,13 +4,13 @@ def solution(begin, target, words):
     if target not in words: # target이 words 안에 없으면 변환 불가능하므로 0 반환
         return 0
     q = deque ()
-    q.append([begin, 0]) # 시작하는 단어, 깊이
+    q.append([begin, 0]) # 시작하는 단어, 변환(이동)횟수
     V = [ 0 ] * (len(words))    # 방문 노드 여부 확인 리스트
     
     while q:
         word, cnt = q.popleft() # q에서 한 개를 뺀다
         
-        if word == target: # word가 원하는 target이 된다면 끝낸다
+        if word == target: # q에서 pop한 단어가 target과 일치하면 cnt 출력
             return cnt # 단계 수 
             
         for i in range(len(words)):
