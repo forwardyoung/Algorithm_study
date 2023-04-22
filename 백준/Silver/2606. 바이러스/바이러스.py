@@ -12,4 +12,4 @@ def dfs(n):
         if visited[i] == 0: # i를 방문하지 않았다면
             dfs(i) # i를 탐색
 dfs(1) # 1번부터 
-print(sum(visited)-1) # 1을 제외한 컴퓨터의 수
+print(sum(visited)-1) # 1을 제외한 방문한 컴퓨터의 수 => 1과 연결된 컴퓨터의 수
