@@ -8,7 +8,7 @@ for _ in range(l):
     graph[b].append(a) # b에 a연결 - 양방향
 def dfs(n):
     visited[n] = 1 # 탐색과 동시에 방문 표시
-    for i in graph[n]: # l번 컴퓨터에 연결된 컴퓨터 리스트에서
+    for i in graph[n]: # n번 컴퓨터에 연결된 컴퓨터 리스트를 순회
         if visited[i] == 0: # i를 방문하지 않았다면
             dfs(i) # i를 탐색
 dfs(1) # 1번부터 
