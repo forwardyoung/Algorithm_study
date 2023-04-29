@@ -32,11 +32,11 @@ def solution(maps):
                             visited[nx][ny] = visited[x][y] + 1
         return None
     cnt = bfs(sx, sy, 'L') # 출발지(sx, sy)부터 레버까지의 최단 거리
-    if cnt == None: # 경로가 막혀있으면
+    if cnt == None: # 이동할 수 없어 cnt 값이 없다면
         return -1 # -1 출력
     answer += cnt[0] 
     cnt = bfs(cnt[1], cnt[2], 'E') # 레버에서 도착지 E까지의 최단 거리
-    if cnt == None: # 경로가 막혀있으면
+    if cnt == None: # 이동할 수 없어 cnt 값이 없다면
         return -1 # -1 출력
     answer += cnt[0] # 레버까지의 거리 + 도착지까지의 거리
     return answer
