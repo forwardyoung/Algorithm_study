@@ -2,7 +2,7 @@ from collections import deque
 
 def solution(maps):
     answer = 0
-    direction = [[-1, 0], [1, 0], [0, -1], [0, 1]]
+    direction = [[-1, 0], [1, 0], [0, -1], [0, 1]] # 상하좌우
     N = len(maps) # 미로의 세로 길이
     M = len(maps[0]) # 미로의 가로 길이
     
@@ -31,13 +31,13 @@ def solution(maps):
                             q.append([nx, ny])
                             visited[nx][ny] = visited[x][y] + 1
         return None
-    cnt = bfs(sx, sy, 'L')
+    cnt = bfs(sx, sy, 'L') # 출발지(sx, sy)부터 레버까지의 최단 거리
     if cnt == None: # 이동할 수 없어 cnt 값이 없다면
         return -1 # -1 출력
     answer += cnt[0] 
-    cnt = bfs(cnt[1], cnt[2], 'E')
+    cnt = bfs(cnt[1], cnt[2], 'E') # 레버에서 도착지 E까지의 최단 거리
     if cnt == None:
         return -1
-    answer += cnt[0]
+    answer += cnt[0] # 레버까지의 거리 + 도착지까지의 거리
     return answer
     
