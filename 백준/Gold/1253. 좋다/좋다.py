@@ -2,9 +2,10 @@ import sys
 input = sys.stdin.readline
 
 N = int(input())
-cnt = 0 # 좋은 수 개수 
+
 numbers = list(map(int, input().split())) # N개의 수 입력 받고
 numbers.sort() # 정렬
+cnt = 0 # 좋은 수 개수 
 
 for k in range(N):
     find = numbers[k] # 찾고자 하는 값
@@ -20,9 +21,9 @@ for k in range(N):
                 i += 1 # 포인터 변경
             elif j == k:
                 j -= 1                
-        elif numbers[i] + numbers[j] < find: # find가 더 크다면
+        elif numbers[i] + numbers[j] < find: # 두 수의 합이 find보다 작다면
             i += 1 # 포인터 i 증가(오른쪽으로)
-        else: # find가 더 작다면
+        else: # 두 수의 합이 더 크다면
             j -= 1 # 포인터 j 감소(왼쪽으로)
  
 print(cnt) # 좋은 수 개수 출력
