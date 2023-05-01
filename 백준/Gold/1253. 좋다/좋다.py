@@ -2,10 +2,9 @@ import sys
 input = sys.stdin.readline
 
 N = int(input())
-
+cnt = 0 # 좋은 수 개수 
 numbers = list(map(int, input().split())) # N개의 수 입력 받고
 numbers.sort() # 정렬
-cnt = 0 # 좋은 수 개수 
 
 for k in range(N):
     find = numbers[k] # 찾고자 하는 값
