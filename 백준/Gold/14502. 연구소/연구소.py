@@ -1,26 +1,27 @@
 from collections import deque
-from itertools import combinations
+from itertools import combinations # itertools.combinations(iterable, r) 
 import sys
 input = sys.stdin.readline
 
 N, M = map(int, input().split())
-matrix = [list(map(int, input().rstrip().split())) for _ in range(N)]
-one = 0
-zero = []
-two = []
+matrix = [list(map(int, input().split())) for _ in range(N)]
+one = 0 # 벽의 개수    
+zero = [] # 빈 칸 좌표 리스트
+two = [] # 바이러스 좌표 리스트
 for i in range(N):
     for j in range(M):
-        if matrix[i][j] == 0:
-            zero.append((i, j))
-        elif matrix[i][j] == 2:
-            two.append((i, j))
-        else:
-            one += 1
-zero3 = []
-for i in combinations(zero, 3):
+        if matrix[i][j] == 0: # 좌표 값이 0이면
+            zero.append((i, j)) # 빈 칸 리스트에 위치 추가
+        elif matrix[i][j] == 2: # 좌표 값이 2이면
+            two.append((i, j)) # 바이러스 리스트에 위치 추가
+        else: 
+            one += 1 # 벽의 개수에 1씩 더하기
+zero3 = [] # 3개의 벽 리스트
+for i in combinations(zero, 3): # 조합으로 빈 칸 중에 3군데 고르기
     zero3.append(i)
-count = 0
-dx, dy = [0,0,1,-1], [1,-1,0,0]
+
+dx, dy = [-1, 1, 0, 0], [0, 0, -1, 1] # 상하좌우 
+
 def bfs():
     start = deque()
     visit = [[0] * M for _ in range(N)]
@@ -35,12 +36,12 @@ def bfs():
                 if matrix[nx][ny] == 0 and visit[nx][ny] == 0:
                     visit[nx][ny] = 2
                     start.append((nx, ny))
-    cnt = 0
+    cnt = 0 # 바이러스가 퍼지지 않은 곳    
     for i in range(N):
         for j in range(M):
             if visit[i][j] == 0:
                 cnt += 1
-    return cnt-one-3
+    return cnt-one-3 # one(벽의 개수)- 내가 세운 벽의 개수 3
 result = []
 for i in zero3:
     for j in i:
