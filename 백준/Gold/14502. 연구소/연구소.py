@@ -45,7 +45,7 @@ def bfs():
 result = [] # 안전영역 크기 리스트
 for i in wall3:
     for j in i:
-        matrix[j[0]][j[1]] = 1
+        matrix[j[0]][j[1]] = 1 # 조합으로 벽이 되었다면 좌표 값을 1로 바꾼다.
     result.append(bfs())
     for j in i:
         matrix[j[0]][j[1]] = 0
