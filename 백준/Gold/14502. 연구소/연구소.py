@@ -42,11 +42,11 @@ def bfs():
             if visit[i][j] == 0:
                 cnt += 1
     return cnt-wall-3 # wall(벽의 개수)- 내가 세운 벽의 개수 3
-result = []
+result = [] # 안전영역 크기 리스트
 for i in wall3:
     for j in i:
         matrix[j[0]][j[1]] = 1
     result.append(bfs())
     for j in i:
         matrix[j[0]][j[1]] = 0
-print(max(result))
+print(max(result)) # 안전 영역 크기의 최댓값
